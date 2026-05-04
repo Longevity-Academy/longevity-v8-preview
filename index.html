@@ -390,13 +390,14 @@ ul, ol { list-style: none; }
   text-shadow: 0 2px 16px rgba(0,0,0,0.35);
 }
 .hero-logo-lockup .hll-eteacher-logo {
-  /* sized to roughly match the 'Group' cap-height in the reference */
+  /* Sized to roughly match the 'Group' cap-height in the reference. */
   height: clamp(46px, 5.8vw, 82px);
   width: auto;
   display: inline-block;
   vertical-align: middle;
-  image-rendering: -webkit-optimize-contrast;
-  filter: drop-shadow(0 2px 14px rgba(0,0,0,0.3));
+  /* Source PNG is 4x oversampled, so default smoothing keeps it sharp. */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 /* Change 2: nudge the H1 down to make room under the new lockup. */
