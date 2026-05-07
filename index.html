@@ -26,6 +26,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link href="https://fonts.cdnfonts.com/css/codec-pro" rel="stylesheet">
 <style>
+/* ===== UNIVERSAL "by eTeacher Group" BYLINE — single italic line, used everywhere ===== */
+.eteacher-byline {
+  display: inline-block !important;
+  font-family: 'Instrument Serif', 'Times New Roman', serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  font-size: clamp(22px, 2.4vw, 34px) !important;
+  line-height: 1 !important;
+  letter-spacing: 0.005em !important;
+  color: rgba(255,255,255,0.92) !important;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.35);
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+  white-space: nowrap;
+}
+.eteacher-byline--on-light {
+  color: rgba(20,30,50,0.85) !important;
+  text-shadow: none !important;
+}
+@media (max-width: 600px) {
+  .eteacher-byline { font-size: clamp(15px, 4.4vw, 22px) !important; }
+}
+
 /* ==================================================
    RESET
    ================================================== */
@@ -7688,12 +7711,10 @@ section.topics .topic-v2-video video {
     <!-- v8: Hero logo lockup — Instrument Serif stacked wordmark with
          italic 'by [eTeacher logo] Group' parent line per CEO-approved reference. -->
     <div class="hero-logo-lockup" aria-label="Longevity Life Academy by eTeacher Group">
-      <div class="hll-est"><span class="hll-rule"></span><span class="hll-est-text">Est. 2000</span><span class="hll-rule"></span></div>
+      
       <div class="hll-wordmark"><span class="hll-l1">Longevity</span><span class="hll-l2">Life Academy</span></div>
       <div class="hll-parent hll-parent--inline">
-        <span class="hll-by">by</span>
-        <img class="hll-eteacher-logo" src="assets/eteacher-wordmark-only.png" alt="eTeacher">
-        <span class="hll-group">Group</span>
+        <span class="eteacher-byline">by eTeacher Group</span>
       </div>
     </div>
     <h1 class="hero-title">
@@ -8370,7 +8391,7 @@ section.topics .topic-v2-video video {
       <div class="about-powered">
         <div class="about-powered-label">Powered by</div>
         <div class="about-powered-brand">
-          <img src="assets/e-teacher-logo.png" alt="eTeacher Group" class="about-powered-logo-img">
+          <span class="eteacher-byline">by eTeacher Group</span>
         </div>
         <p class="about-powered-desc">
           eTeacher Group is reshaping online education with a dynamic, personalized
@@ -8478,7 +8499,7 @@ section.topics .topic-v2-video video {
 <section class="how-v2" id="how">
   <div class="container">
     <div class="how-v2-header reveal">
-      <img loading="lazy" decoding="async" src="assets/e-teacher-logo-dark.png" alt="eTeacher Group" class="how-v2-logo">
+      <span class="eteacher-byline" style="display:block;text-align:center;margin-bottom:28px;">by eTeacher Group</span>
       <h2 class="how-v2-title">How It Works</h2>
       <p class="how-v2-sub">Six clear steps from enrollment to your personal longevity protocol.</p>
     </div>
