@@ -33,6 +33,82 @@
   .eteacher-byline { font-size: clamp(15px, 4.4vw, 22px) !important; }
 }
 
+/* ===== v8 hero logo lockup — stacked wordmark + left-aligned byline ===== */
+.hero-logo-lockup {
+  display: block;
+  margin: 0 0 56px 0;
+  text-align: inherit;
+}
+.hero-logo-lockup .hll-wordmark {
+  font-family: 'Instrument Serif', 'Times New Roman', serif;
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -0.015em;
+  margin-bottom: 14px;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.35);
+}
+.hero-logo-lockup .hll-l1 {
+  display: block;
+  color: #B8D4E8;
+  font-size: clamp(56px, 7.6vw, 112px);
+}
+.hero-logo-lockup .hll-l2 {
+  display: block;
+  color: #FFFFFF;
+  font-size: clamp(56px, 7.6vw, 112px);
+  margin-top: 2px;
+}
+.hero-logo-lockup .hll-parent {
+  font-family: 'Instrument Serif', 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.005em;
+  color: #FFFFFF;
+}
+.hero-logo-lockup .hll-parent--inline {
+  display: block;
+  text-align: left;
+}
+
+/* ===== LEFT-ALIGN hero content (production parity) ===== */
+.hero .hero-inner {
+  text-align: left !important;
+  margin-left: 0;
+  margin-right: auto;
+  padding-left: max(8vw, 32px) !important;
+  max-width: 1280px !important;
+}
+.hero-academy-name,
+.hero-title,
+.hero-sub,
+.hero-logo-lockup {
+  text-align: left !important;
+}
+.hero-cta-row {
+  justify-content: flex-start !important;
+}
+.trustpilot {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+@media (max-width: 900px) {
+  .hero .hero-inner {
+    text-align: center !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  .hero-academy-name,
+  .hero-title,
+  .hero-sub,
+  .hero-logo-lockup {
+    text-align: center !important;
+  }
+  .hero-cta-row { justify-content: center !important; }
+  .trustpilot { margin-left: auto !important; margin-right: auto !important; }
+}
+
+
 /* ==================================================
    RESET
    ================================================== */
@@ -3208,10 +3284,12 @@ h2.section-title {
   </video>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <div class="hero-academy-name">
-      The Longevity <span class="life-blue">Life</span> Academy
+    <div class="hero-logo-lockup" aria-label="Longevity Life Academy by eTeacher Group">
+      <div class="hll-wordmark"><span class="hll-l1">Longevity</span><span class="hll-l2">Life Academy</span></div>
+      <div class="hll-parent hll-parent--inline">
+        <span class="eteacher-byline">by eTeacher Group</span>
+      </div>
     </div>
-    <div class="hero-academy-byline" style="text-align:center;margin-top:8px;margin-bottom:18px;"><span class="eteacher-byline">by eTeacher Group</span></div>
     <h1 class="hero-title">
       It's Your <span class="life-blue">Life</span>.<br>Live It Well.
     </h1>
